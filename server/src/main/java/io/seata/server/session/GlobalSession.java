@@ -613,8 +613,8 @@ public class GlobalSession implements SessionLifecycle, SessionStorable {
             applicationDataBytes);
 
         if (size > MAX_GLOBAL_SESSION_SIZE) {
-            throw new RuntimeException("global session size exceeded, size : " + size + " bytes maxGlobalSessionSize : " +
-                MAX_GLOBAL_SESSION_SIZE);
+            throw new RuntimeException("global session size exceeded, size : " + size + " bytes, maxGlobalSessionSize : " +
+                MAX_GLOBAL_SESSION_SIZE + " bytes");
         }
         ByteBuffer byteBuffer = byteBufferThreadLocal.get();
         //recycle
